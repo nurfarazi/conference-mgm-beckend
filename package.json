@@ -5,9 +5,12 @@
     "body-parser": "^1.14.1",
     "ejs": "^2.3.4",
     "express": "^4.13.3",
+    "express-session": "^1.12.1",
     "helmet": "^0.15.0",
     "jsonwebtoken": "^5.4.1",
     "mongoose": "^4.2.9",
     "morgan": "^1.6.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
   }
 }

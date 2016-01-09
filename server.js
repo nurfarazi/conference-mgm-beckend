@@ -116,10 +116,18 @@ app.get('/home', function (req, res) {
 // route to return all users (GET http://localhost:8080/api/users)
 app.get('/users', function (req, res) {
 
+
     User.find({}, function (err, users) {
-        res.render('show');
-        console.log('now i am at users list');
+        if (err) {
+            res.send(err);
+        } else {
+            res.json(users)
+
+        }
     });
+
+
+
 });
 
 

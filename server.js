@@ -20,7 +20,7 @@ var User = require('./app/models/user'); // get our mongoose model
 // =======================
 // configuration =========
 // =======================
-var port = process.env.PORT || 8080; // used to create, sign, and verify tokens
+var port = process.env.PORT || 9090; // used to create, sign, and verify tokens
 mongoose.connect(config.database); // connect to database
 app.set('superSecret', config.secret); // secret variable
 
@@ -57,17 +57,21 @@ app.get('/', function (req, res) {
 });
 
 
-app.get('/setup', function (req, res) {
+app.post('/register', function (req, res) {
 
-    // create a sample user
-    var nick = new User({
-        name: 'n',
-        password: 'n',
-        admin: true
+
+    var user = new User({
+        name: req.body.names,
+        password: req.body.password,
+        admin: false,
+        email: req.body.email,
+        phonenumber: req.body.phonenumber,
+        address: req.body.address,
+        companyname: req.body.companyname
     });
 
     // save the sample user
-    nick.save(function (err) {
+    user.save(function (err) {
         if (err) throw err;
 
         console.log('User saved successfully');

@@ -1,6 +1,6 @@
 module.exports = {
 
     'secret': 'ilovescotchyscotch',
-    'database': 'mongodb://localhost/nodetoken'
+    'database': 'mongodb://localhost/conferencemgm'
 
 };

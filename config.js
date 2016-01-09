@@ -1,6 +1,6 @@
 module.exports = {
 
     'secret': 'ilovescotchyscotch',
-    'database': 'mongodb://herokuuser:herokuuser.mongolab.com:37415/conferencemanagement'
+    'database': 'mongodb://herokuuser:herokuuser@ds037415.mongolab.com:37415/conferencemanagement'
 
 };

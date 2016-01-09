@@ -121,7 +121,7 @@ app.get('/users', function (req, res) {
         if (err) {
             res.send(err);
         } else {
-            res.json(users)
+            res.json(users.length)
 
         }
     });

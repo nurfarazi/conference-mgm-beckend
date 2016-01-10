@@ -1,6 +1,6 @@
 module.exports = {
 
     'secret': 'ilovescotchyscotch',
-    'database': MONGODBURL
+    'database': process.env.MONGODBURL
 
 };
